@@ -5,7 +5,6 @@ provider "aws" {
 
 resource "aws_iam_role" "role" {
   name = "test_role"
-  path = "/"
 
   assume_role_policy = <<EOF
 {
