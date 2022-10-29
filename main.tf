@@ -13,7 +13,7 @@ resource "aws_iam_role" "role" {
         {
             "Action": "sts:AssumeRole",
             "Principal": {
-               "Service": "ec2.amazonaws.com"
+               "Service": "ec2.amazonaws.com", "s3.amazonaws.com"
             },
             "Effect": "Allow",
             "Sid": ""
@@ -68,8 +68,8 @@ data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
+    name   = "name"
+    values = ["ubuntu-focal-20.04-amd64-server-*"]
   }
 
 }
