@@ -55,7 +55,7 @@ resource "aws_iam_role_policy_attachment" "test-attach" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "my-s3-test-bucket"
+  bucket = "my-s3-test-bucket-9999"
 
   tags = {
     Name        = "My bucket"
